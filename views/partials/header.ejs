@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coding Samurai</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="shortcut icon" href="/favicon.jpg" type="image/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/e5a5ba9f21.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="header">
+      <div class="head_container container-flex">
+        <div class="main_head container-flex">
+          <div class="header_icon">
+            <a href="/"><img src="favicon.jpg" alt="" /></a>
+          </div>
+          <div class="header_text">
+            <h1 class="head text"><a href="/">Coding Samurai</a></h1>
+          </div>
+        </div>
+        <div class="options container-flex">
+          <% if(user) { %>
+          <h3>
+            <div class="greet">
+              <a href="/courses" style="text-decoration: none"
+                >Hello, <%= user.name %></a
+              >
+            </div>
+          </h3>
+          <a href="/profile"><div class="profile">Profile</div></a>
+          <a href="/usertasks"><div class="tasks">Tasks</div></a>
+          <a href="/logout"><div class="logout">Logout</div></a>
+          <% } else { %>
+          <a href="/signup"><div class="signup">Sign up</div></a>
+          <a href="/login"><div class="login">Login</div></a>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

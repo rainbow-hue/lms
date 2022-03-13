@@ -1,0 +1,85 @@
+<%- include('partials/header'); -%>
+
+<div class="back_to_courses container-flex">
+  <a href="/courses" class="backtrack"><img src="go_back.png" alt="" /> </a>
+  <a href="/courses" class="btn">Courses</a>
+</div>
+
+<div class="iframe_container container-flex">
+  <div class="course_text">
+    <h1>Introduction to Competitive Programming</h1>
+    <h2>Let's Understand Key Points in Competitive Programming</h2>
+    <h3>How to start preparing for competitions</h3>
+    <div class="flag">Mark as complete</div>
+  </div>
+
+  <div class="video_container">
+    <iframe
+      width="683"
+      height="384"
+      src="https://www.youtube.com/embed/qZNRKB0uR5o"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+</div>
+
+<div class="iframe_container container-flex">
+  <div class="course_text">
+    <h1>STL in c++</h1>
+    <h2>Competitive Programming using STL</h2>
+    <h3>Learn most important STL Libraries</h3>
+    <div class="flag">Mark as complete</div>
+  </div>
+
+  <div class="video_container">
+    <iframe
+      width="683"
+      height="384"
+      src="https://www.youtube.com/embed/mOzPZ3hWFVQ"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+</div>
+
+<div class="iframe_container container-flex">
+  <div class="course_text">
+    <h1>DSA</h1>
+    <h2>Learn Data Structres and Algorithms</h2>
+    <h3>Learn to implement Data Structres</h3>
+    <div class="flag">Mark as complete</div>
+  </div>
+
+  <div class="video_container">
+    <iframe
+      width="683"
+      height="384"
+      src="https://www.youtube.com/embed/8hly31xKli0"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+</div>
+
+<script>
+  const button = document.getElementsByClassName("flag");
+
+  for (var i = 0; i < button.length; i++) {
+    button[i].addEventListener("click", markCourse);
+  }
+
+  function markCourse(e) {
+    e.target.style.background = "green";
+    e.target.textContent = "Completed";
+    e.target.style.color = "white";
+  }
+</script>
+
+<%- include('partials/footer'); -%>

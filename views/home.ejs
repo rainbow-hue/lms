@@ -1,0 +1,89 @@
+<%- include('partials/header'); -%>
+
+<header>
+  <h1>Be a Coding Samurai</h1>
+  <h2>A Platform for Aspiring Programmers!</h2>
+  <% if(user){ %>
+  <div class="get_started">
+    <a href="/courses" class="btn">Explore Our Programs</a>
+  </div>
+  <% }else{ %>
+  <div class="get_started">
+    <a href="/login" class="btn">Explore Our Programs</a>
+  </div>
+  <% } %>
+</header>
+
+<div class="info_section">
+  <div class="info_container container-flex">
+    <div class="info_image">
+      <img src="/info_image1.svg" alt="" />
+    </div>
+    <div class="info_text">
+      <h1>
+        If you have the courage and the commitment to learn coding,then Coding
+        Samurai will empower you.
+      </h1>
+      <h2>WHATEVER IT TAKES</h2>
+    </div>
+  </div>
+</div>
+
+<div class="info_section">
+  <div class="info_container container-flex">
+    <div class="info_text">
+      <h1>Why Join Us?</h1>
+      <h2>Great Students deserve the best jobs</h2>
+      <p style="font-size: 20px">Coding Samurai Makes it Happen</p>
+    </div>
+    <div class="info_image">
+      <img src="info_image2.svg" alt="" />
+    </div>
+  </div>
+</div>
+
+<div class="info_section">
+  <div class="info_container container-flex">
+    <div class="info_image">
+      <img src="info_image3.svg" alt="" />
+    </div>
+    <div class="info_text">
+      <h1>Learn Competitive Coding</h1>
+      <h2>
+        Want to crack competitive programming competitions and get placed in a
+        product-based company you need
+      </h2>
+    </div>
+  </div>
+</div>
+
+<div class="info_section">
+  <div class="info_container container-flex">
+    <div class="info_text">
+      <h1>Mobile Development Courses</h1>
+      <h2>Learn Mobile App Development Using Swift</h2>
+    </div>
+    <div class="info_image">
+      <img src="info_image4.svg" alt="" />
+    </div>
+  </div>
+</div>
+
+<div class="info_section">
+  <div class="info_container container-flex">
+    <div class="info_image">
+      <img src="info_image5.svg" alt="" />
+    </div>
+    <div class="info_text">
+      <h1>So what are you waiting for?</h1>
+      <h2>Join us now and level up</h2>
+    </div>
+  </div>
+</div>
+
+<% if(!user) { %>
+<section>
+  <div class="get_started"><a href="/signup" class="btn">Sign Up</a></div>
+</section>
+
+<% } %> <%- include('partials/footer'); -%>

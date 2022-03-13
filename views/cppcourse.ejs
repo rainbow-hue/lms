@@ -1,0 +1,72 @@
+<%- include('partials/header'); -%>
+
+<div class="back_to_courses container-flex">
+  <a href="/courses" class="backtrack"><img src="go_back.png" alt="" /></a>
+  <a href="/courses" class="btn">Courses</a>
+</div>
+
+<div class="iframe_container container-flex">
+  <div class="course_text">
+    <h1>Object Oriented Programming</h1>
+    <h2>This a course teaches you basics of C++ and OOPs Concept</h2>
+    <h3>First Lets Learn basics of C++</h3>
+    <div class="flag">Mark as complete</div>
+  </div>
+
+  <div class="video_container">
+<iframe width="853" height="480" src="https://www.youtube.com/embed/McojvctVsUs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</div>
+
+<div class="iframe_container container-flex">
+  <div class="course_text">
+    <h1>OOPs Concept</h1>
+    <h2>Basics of OOPs Concept</h2>
+    <h3>Learn Importance Of OOPs Concept</h3>.</h3>
+    <div class="flag">Mark as complete</div>
+  </div>
+  <div class="video_container">
+    <iframe 
+    width="683" 
+    height="384" 
+    src="https://www.youtube.com/embed/pTB0EiLXUC8"
+     title="YouTube video player" 
+     frameborder="0" 
+     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+     allowfullscreen></iframe>
+  </div>
+</div>
+
+<div class="iframe_container container-flex">
+  <div class="course_text">
+    <h1>Intermediate C++</h1>
+    <h2>Using Classes</h2>
+    <h3>
+      Now that we have learnt basics of OOP and C++ ,Lets learn something more
+    </h3>
+
+    <div class="flag">Mark as complete</div>
+  </div>
+  <div class="video_container">
+    <iframe width="683" height="384" src="https://www.youtube.com/embed/iTL4iyFE_KI" 
+    title="YouTube video player" frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe>
+  </div>
+</div>
+
+<script>
+  const button = document.getElementsByClassName("flag");
+
+  for (var i = 0; i < button.length; i++) {
+    button[i].addEventListener("click", markCourse);
+  }
+
+  function markCourse(e) {
+    e.target.style.background = "green";
+    e.target.textContent = "Completed";
+    e.target.style.color = "white";
+  }
+</script>
+
+<%- include('partials/footer'); -%>
