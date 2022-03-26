@@ -32,7 +32,9 @@ mongoose
     useCreateIndex: true,
     useFindAndModify: false
   })
-  .then((result) => app.listen(port))
+  .then((result) => app.listen(process.env.PORT || 3000, function () {
+    console.log("SERVER STARTED PORT: 3000");
+  }))
   .catch((err) => console.log(err));
 
 app.get("*", checkUser);
